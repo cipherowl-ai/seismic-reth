@@ -95,6 +95,7 @@ mod tests {
             "--screening.fail-mode",
             "close",
         ])
+        .map_err(|e| e.to_string())
         .unwrap();
     }
 
@@ -107,6 +108,7 @@ mod tests {
             "--screening.fail-mode",
             "permissive",
         ])
+        .map_err(|e| e.to_string())
         .unwrap();
     }
 }

@@ -7,7 +7,8 @@
 pub(crate) mod calldata;
 mod client;
 mod metrics;
-pub(crate) mod proto;
+#[allow(clippy::derive_partial_eq_without_eq, clippy::missing_const_for_fn, clippy::doc_markdown)]
+pub mod proto;
 mod validator;
 
 pub use calldata::{extract_addresses, extract_calldata_addresses};
